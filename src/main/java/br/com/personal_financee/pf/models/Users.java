@@ -21,6 +21,8 @@ public class Users {
 
     private Boolean isActive = false;
 
+    private ProfileEnum profileEnum;
+
     public Long getId_usuario() {
         return id_usuario;
     }
@@ -67,5 +69,13 @@ public class Users {
 
     public void setActive(Boolean active) {
         isActive = active;
+    }
+
+    public ProfileEnum getProfileEnum() {
+        return profileEnum;
+    }
+
+    public void setProfileEnum(ProfileEnum profileEnum) {
+        this.profileEnum = profileEnum;
     }
 }
