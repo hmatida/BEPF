@@ -22,6 +22,10 @@ public class Account {
 
     private TypeOfAccount typeOfAccount;
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private Users user;
+
     private boolean principal = false;
 
     public Long getId_account() {
@@ -79,5 +83,13 @@ public class Account {
 
     public void setPrincipal(boolean principal) {
         this.principal = principal;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }

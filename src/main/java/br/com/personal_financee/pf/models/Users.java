@@ -15,6 +15,8 @@ public class Users {
 
     private String login;
 
+    private String email;
+
     private String password;
 
     private Sexo sex;
@@ -77,5 +79,13 @@ public class Users {
 
     public void setProfileEnum(ProfileEnum profileEnum) {
         this.profileEnum = profileEnum;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

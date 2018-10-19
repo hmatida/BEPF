@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface AccountRepository extends CrudRepository<Account, Long> {
 
     //Buscar por nome da conta
@@ -13,7 +15,10 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     public Account findByName(@Param("name") String name);
 
     //Retorna a conta principal do usuário.
-    //*Nota: não implementado a busca do usuário.
-    @Query("SELECT ac FROM Account ac WHERE ac.principal = true")
-    public Account principalAccountByUser();
+    @Query("SELECT ac FROM Account ac WHERE ac.user=:user and ac.principal = true")
+    public Account principalAccountByUser(@Param("user") Users user);
+
+    //Retorna as contas do usuário.
+    @Query("SELECT ac FROM Account ac WHERE ac.user=:user")
+    public List<Account> geAllAccountsByUser(@Param("user") Users user);
 }

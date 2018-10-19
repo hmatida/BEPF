@@ -35,6 +35,8 @@ public class Launches {
     @JoinColumn(name = "id_launchPrediction", referencedColumnName = "id_launchPrediction")
     private LaunchPrediction launchPrediction;
 
+    private String atach = null;
+
     private TypeOfLaunch typeOfLaunch;
 
     private String description;
@@ -161,4 +163,11 @@ public class Launches {
         this.balance = balance;
     }
 
+    public String getAtach() {
+        return atach;
+    }
+
+    public void setAtach(String atach) {
+        this.atach = atach;
+    }
 }
