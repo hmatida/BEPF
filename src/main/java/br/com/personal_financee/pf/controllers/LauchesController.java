@@ -4,6 +4,7 @@ package br.com.personal_financee.pf.controllers;
 import br.com.personal_financee.pf.models.Account;
 import br.com.personal_financee.pf.models.Launches;
 import br.com.personal_financee.pf.models.Users;
+import br.com.personal_financee.pf.models.LaunchesAtach;
 import br.com.personal_financee.pf.repositories.*;
 import br.com.personal_financee.pf.security.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,9 +35,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class LauchesController {
 
     @Autowired
-    private LaunchesRepository launchesRepository;
-
-    @Autowired
     private SubCategoryRepository subCategoryRepository;
 
     @Autowired
@@ -50,12 +49,20 @@ public class LauchesController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private LaunchesRepository launchesRepository;
+
+    @Autowired
+    private LauncheAtachRepository launcheAtachRepository;
+
     private final Path rootLocation = Paths.get("/Users/hernanematida/Documents/Projetos em andamento/pf/BEPF/src/" +
                                                 "main/java/br/com/personal_financee/pf/models/atachs");
 
+    private LaunchesAtach launchesAtach = null;
+    //File store in hd
     private String fileName = null;
     private String unsTorageName = null;
-
+    //End...
 
 
     /*
@@ -108,7 +115,30 @@ public class LauchesController {
     }
 
     /**
-    * Persiste lançamento no banco de dados.
+     * Grava o arquivo anexo em banco. Teste em 20/10/2018
+     * @return void
+     * */
+    private LaunchesAtach prepareLaunchAtach(MultipartFile multipartFile) throws IOException {
+        LaunchesAtach la = new LaunchesAtach();
+        la.setAtach(multipartFile.getBytes().clone());
+        la.setExtension(multipartFile.getContentType());
+        la.setFileName(multipartFile.getOriginalFilename());
+        la.setLaunches(null);
+        return la;
+    }
+
+    private LaunchesAtach storeLauncAtach(LaunchesAtach launchesAtach){
+        launcheAtachRepository.save(launchesAtach);
+        return launchesAtach;
+    }
+
+    private LaunchesAtach getLaunchesAtach(Launches launches){
+        return launcheAtachRepository.getAtachByLaunches(launches);
+    }
+
+
+    /**
+    * Persiste lançamento no arquivo de file.
      * 16/10/2018 -> Adicionado o salvamento de anexo (file) pertinente ao lançamento.
     * **/
     private Launches cadLaunches(Launches launches) throws IOException {
@@ -120,6 +150,23 @@ public class LauchesController {
             launchesRepository.save(launches);
             this.fileName = null;
             this.unsTorageName = null;
+        }
+        return launches;
+    }
+
+    /**
+     * Persiste lançamento no banco de dados.
+     * 20/10/2018 -> Adicionado o salvamento de anexo (file) pertinente ao lançamento.
+     * **/
+    private Launches cadLaunchesAtachBd(Launches launches) throws IOException {
+        adjustLauncheBalance(launches.getUser(), launches);
+        launchesRepository.save(launches);
+        if (this.launchesAtach != null){
+            this.launchesAtach.setLaunches(launches);
+            this.launchesAtach=storeLauncAtach(this.launchesAtach);
+            launches.setAtach(this.launchesAtach.getExtension());
+            this.launchesAtach = null;
+            launchesRepository.save(launches);
         }
         return launches;
     }
@@ -288,7 +335,7 @@ public class LauchesController {
         setTimeDate(launches.getDt());
         launches.setUser(userByRequest(request));
         try {
-            Launches lc = this.cadLaunches(launches);
+            Launches lc = this.cadLaunchesAtachBd(launches);
             return new ResponseEntity<Launches>(lc, HttpStatus.CREATED);
         } catch (IOException e) {
             e.printStackTrace();
@@ -318,6 +365,35 @@ public class LauchesController {
         return new ResponseEntity<String>("Deu certo", HttpStatus.OK);
     }
 
+    /**
+     * Segundo teste de upload:
+     *  -> Essa opção grava o arquivo anexo em banco (byte[]) para retornar ao front end em Multpart.
+     * */
+    @RequestMapping(method = RequestMethod.POST, value = "/upload2")
+    public ResponseEntity<String> uploadTeste2(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException {
+        if (!file.isEmpty()){
+            try {
+                this.launchesAtach = prepareLaunchAtach(file);
+                String response = "Upload enviado com sucesso.";
+                return new ResponseEntity<String>(response, HttpStatus.OK);
+            } catch (Exception e){
+                String response = e.getMessage();
+                return new ResponseEntity<String>(response, HttpStatus.NOT_ACCEPTABLE);
+            }
+
+        }
+        return new ResponseEntity<String>("Deu certo", HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/clearupload")
+    public ResponseEntity<String> clearUpload(){
+        this.launchesAtach = null;
+        this.fileName = null;
+        this.unsTorageName = null;
+        String response = "Anexo excluído com sucesso.";
+        return new ResponseEntity<String>(response, HttpStatus.OK);
+    }
+
     @RequestMapping(method = RequestMethod.PUT, value = "/change", consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE)
     public  ResponseEntity<Launches> changeLaunches(HttpServletRequest request, @RequestBody Launches launches){
@@ -340,14 +416,14 @@ public class LauchesController {
 
     @GetMapping("file/{id}")
     @ResponseBody
-    public ResponseEntity<Resource> getAtachFile(@PathVariable Long id) throws IOException {
+    public ResponseEntity<byte[]> getAtachFile(@PathVariable Long id) throws IOException {
         Launches laun = launchesRepository.findById(id).get();
-        Resource resource = loadFileStored(laun.getAtach());
+        LaunchesAtach launchesAtach = getLaunchesAtach(laun);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.parseMediaType(launchesAtach.getExtension()));
         System.out.println("teste.....");
-        System.out.println(resource.getFilename());
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"%s\""+resource.getFilename())
-                .body(resource);
+        System.out.println(launchesAtach.getFileName());
+        return new ResponseEntity<byte[]>(launchesAtach.getAtach(), headers, HttpStatus.OK);
     }
 
 }

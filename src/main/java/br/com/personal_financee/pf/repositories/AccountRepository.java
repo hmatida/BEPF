@@ -1,6 +1,7 @@
 package br.com.personal_financee.pf.repositories;
 
 import br.com.personal_financee.pf.models.Account;
+import br.com.personal_financee.pf.models.TypeOfAccount;
 import br.com.personal_financee.pf.models.Users;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -21,4 +22,8 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     //Retorna as contas do usuário.
     @Query("SELECT ac FROM Account ac WHERE ac.user=:user")
     public List<Account> geAllAccountsByUser(@Param("user") Users user);
+
+    //Retorna as contas com base nos parâmetros
+    @Query("SELECT ac FROM Account ac WHERE ac.user=:user and ac.typeOfAccount=:typeOfAccount")
+    public List<Account> getAllAccountsByUserAndTpAccount(@Param("user") Users user, @Param("typeOfAccount")TypeOfAccount tpAccount);
 }

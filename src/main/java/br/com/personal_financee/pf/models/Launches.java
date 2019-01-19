@@ -12,7 +12,7 @@ public class Launches {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_launch;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat (pattern = "yyyy-MM-dd")
     private Calendar dt;
 
     @ManyToOne

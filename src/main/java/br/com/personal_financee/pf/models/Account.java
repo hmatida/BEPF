@@ -22,6 +22,9 @@ public class Account {
 
     private TypeOfAccount typeOfAccount;
 
+    //Quando opção é cartão de crédito.
+    private Integer dtVcto;
+
     @ManyToOne
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     private Users user;
@@ -91,5 +94,13 @@ public class Account {
 
     public void setUser(Users user) {
         this.user = user;
+    }
+
+    public Integer getDtVcto() {
+        return dtVcto;
+    }
+
+    public void setDtVcto(Integer dtVcto) {
+        this.dtVcto = dtVcto;
     }
 }

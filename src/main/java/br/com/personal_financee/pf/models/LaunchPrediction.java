@@ -35,7 +35,11 @@ public class LaunchPrediction {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Calendar dt_exp;
 
-    private Boolean isPay = false;
+    private int isPay = 0;
+
+    @ManyToOne
+    @JoinColumn(name = "id_account", referencedColumnName = "id_account")
+    private Account account;
 
     public Long getId_launchPrediction() {
         return id_launchPrediction;
@@ -101,14 +105,13 @@ public class LaunchPrediction {
         this.dt_exp = dt_exp;
     }
 
-    public Boolean getPay() {
+    public int getIsPay() {
         return isPay;
     }
 
-    public void setPay(Boolean pay) {
-        isPay = pay;
+    public void setIsPay(int isPay) {
+        this.isPay = isPay;
     }
-
 
     public Users getUser() {
         return user;
@@ -116,5 +119,13 @@ public class LaunchPrediction {
 
     public void setUser(Users user) {
         this.user = user;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
