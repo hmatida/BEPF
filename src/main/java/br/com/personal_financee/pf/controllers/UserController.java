@@ -3,9 +3,12 @@ package br.com.personal_financee.pf.controllers;
 import br.com.personal_financee.pf.models.ProfileEnum;
 import br.com.personal_financee.pf.models.Users;
 import br.com.personal_financee.pf.passclasses.SimpleUser;
+import br.com.personal_financee.pf.repositories.CategoryRepository;
+import br.com.personal_financee.pf.repositories.SubCategoryRepository;
 import br.com.personal_financee.pf.repositories.UserRepository;
 import br.com.personal_financee.pf.security.JwtTokenUtil;
 import br.com.personal_financee.pf.utility.SendMail;
+import br.com.personal_financee.pf.utility.UserNew;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -30,6 +33,12 @@ public class UserController {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    @Autowired
+    private SubCategoryRepository subCategoryRepository;
+
 
     /**
      * Parâmetro de execução
@@ -39,8 +48,22 @@ public class UserController {
             return null;
         } else {
             userRepository.save(user);
+
+            new Thread() {
+                public void run(){
+                    categoryRepository.saveAll(UserNew.cadCategories(user));
+                    subCategoryRepository.saveAll(UserNew.cadSubCategories(user));
+                }
+            }.start();
+
+
             user.setPassword(null);
-            SendMail.enviaEmail(user.getEmail());
+
+            new Thread() {
+                public void run(){
+                    SendMail.enviaEmail(user.getEmail());
+                }
+            }.start();
             return user;
         }
     }

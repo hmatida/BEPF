@@ -1,16 +1,17 @@
 package br.com.personal_financee.pf.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Category {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_category;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private Users users;
 
     private String name_category;
 
@@ -38,5 +39,13 @@ public class Category {
 
     public void setTypeOfLaunch(TypeOfLaunch typeOfLaunch) {
         this.typeOfLaunch = typeOfLaunch;
+    }
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
     }
 }

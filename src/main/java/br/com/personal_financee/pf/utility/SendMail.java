@@ -35,7 +35,37 @@ public class SendMail {
 
             message.setRecipients(Message.RecipientType.TO, toUser);
             message.setSubject("Personal Financee - Confirmação de cadasto.");//Assunto
-            message.setText("Confirmação de cadastro da sua conta no Personal Financeee!!!");
+
+            String text = " <div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\">Teste</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\">n njkljasjfklj sajfklsaf skfj asflsaj sjlf saf</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div class=\"separator\" style=\"clear: both; text-align: center;\">\n" +
+                    "<a href=\"https://2.bp.blogspot.com/-HDrIcW8ZVtc/XHlYHv8H7CI/AAAAAAAAAUA/a39y2BdAHd412dBGTOLS295lOMvZbKLSACLcBGAs/s1600/4585japao.jpg\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" data-original-height=\"768\" data-original-width=\"1024\" height=\"240\" src=\"https://2.bp.blogspot.com/-HDrIcW8ZVtc/XHlYHv8H7CI/AAAAAAAAAUA/a39y2BdAHd412dBGTOLS295lOMvZbKLSACLcBGAs/s320/4585japao.jpg\" width=\"320\" /></a></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"color: #20124d; font-family: Georgia, Times New Roman, serif; font-size: large;\">kjksahfhsah sa[&nbsp;</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"color: #20124d; font-family: Georgia, Times New Roman, serif; font-size: large;\">&nbsp;njasfsa</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"color: #20124d; font-family: Georgia, Times New Roman, serif; font-size: large;\">&nbsp;jhaj a</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"color: #20124d; font-family: Georgia, Times New Roman, serif; font-size: large;\">k lkajdf</span></div>\n" +
+                    "<div style=\"text-align: center;\">\n" +
+                    "<span style=\"font-family: Georgia, Times New Roman, serif; font-size: large;\"><br /></span></div>";
+
+            message.setContent(text, "text/html");
             /**Método para enviar a mensagem criada*/
             Transport.send(message);
 

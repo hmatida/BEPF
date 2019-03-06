@@ -14,7 +14,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -44,6 +46,7 @@ public class AccountController {
 
     private Account changeUserSave(Long id, Account account){
         account.setId_account(id);
+        verifyPrincipal(account);
         accountRepository.save(account);
         return account;
     }
@@ -56,6 +59,26 @@ public class AccountController {
         return userRepository.findByLogin(userName);
     }
 
+    private Account getPrincipalAccountByRequest(HttpServletRequest request){
+        return accountRepository.principalAccountByUser(userByRequest(request));
+    }
+
+    private void verifyPrincipal (Account account){
+        if (account.getPrincipal() == 1) {
+            List<Account> accountList = new ArrayList<>();
+            accountList.addAll(accountRepository.geAllAccountsByUser(account.getUser()));
+            for (int i = 0; i < accountList.size(); i++) {
+                if (accountList.get(i).getPrincipal() == 1 && accountList.get(i) != account) {
+                    accountList.get(i).setPrincipal(0);
+                    accountRepository.save(accountList.get(i));
+                    break;
+                }
+            }
+        } else if (accountRepository.principalAccountByUser(account.getUser()) == null) {
+            account.setPrincipal(1);
+        }
+    }
+
 
     /**
      * End points
@@ -65,6 +88,7 @@ public class AccountController {
     public ResponseEntity<Account> postAccount(HttpServletRequest request, @RequestBody Account account) {
 
         account.setUser(userByRequest(request));
+        verifyPrincipal(account);
         if (cadAccount(account) == null){
             return new ResponseEntity<Account>(account, HttpStatus.NOT_ACCEPTABLE);
         } else {
@@ -93,5 +117,8 @@ public class AccountController {
         return new ResponseEntity<Account>(accountRepository.findById(id).get(), HttpStatus.OK);
     }
 
-
+    @RequestMapping(method = RequestMethod.GET, value = "/principal", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Account> getPrincipalAccoun(HttpServletRequest request){
+        return new ResponseEntity<Account>(getPrincipalAccountByRequest(request), HttpStatus.OK);
+    }
 }

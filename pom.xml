@@ -6,7 +6,7 @@
 	<groupId>br.com.personal_financee</groupId>
 	<artifactId>pf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>pf</name>
 	<description>Demo project for Spring Boot</description>
@@ -78,14 +78,52 @@
 			<artifactId>javax.ws.rs-api</artifactId>
 			<version>2.0</version>
 		</dependency>
+
+		<!--Dependencia de deploy em servidor Tomcat-->
+		<dependency>
+			<groupId>net.sourceforge.barbecue</groupId>
+			<artifactId>barbecue</artifactId>
+			<version>1.5-beta1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>8.5.27</version>
+		</dependency>
+
+		<!--/Dependencia de deploy em servidor Tomcat-->
 	</dependencies>
 
 	<build>
+		<finalName>backendpersonalfinancee</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!--<plugin>-->
+				<!--<artifactId>maven-resources-plugin</artifactId>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>copy-resources</id>-->
+						<!--<phase>validate</phase>-->
+						<!--<goals><goal>copy-resources</goal></goals>-->
+						<!--<configuration>-->
+							<!--<outputDirectory>/Users/hernanematida/Documents/Projetos em andamento/pf/BEPF/src/main/resources/static</outputDirectory >-->
+							<!--<resources>-->
+								<!--<resource>-->
+									<!--<directory>/Users/hernanematida/Documents/Projetos em andamento/personal_financee_control/FEPF/dist</directory>-->
+								<!--</resource>-->
+							<!--</resources>-->
+						<!--</configuration>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
 		</plugins>
 	</build>
 

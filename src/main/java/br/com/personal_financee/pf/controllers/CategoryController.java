@@ -4,15 +4,19 @@ package br.com.personal_financee.pf.controllers;
 import br.com.personal_financee.pf.models.Account;
 import br.com.personal_financee.pf.models.Category;
 import br.com.personal_financee.pf.models.SubCategory;
+import br.com.personal_financee.pf.models.Users;
 import br.com.personal_financee.pf.passclasses.PassSubCategory;
 import br.com.personal_financee.pf.repositories.CategoryRepository;
 import br.com.personal_financee.pf.repositories.SubCategoryRepository;
+import br.com.personal_financee.pf.repositories.UserRepository;
+import br.com.personal_financee.pf.security.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 
 @RestController
@@ -26,15 +30,23 @@ public class CategoryController {
     @Autowired
     private SubCategoryRepository subCategoryRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+
     /**
      * Parâmetro de execução
      * */
-    private Category cadCategory(Category category){
+    private Category cadCategory(Category category, HttpServletRequest request){
+        category.setUsers(userByRequest(request));
         categoryRepository.save(category);
         return category;
     }
 
-    private SubCategory cadSubCategory(SubCategory subCategory){
+    private SubCategory cadSubCategory(SubCategory subCategory, HttpServletRequest request){
+        subCategory.setUsers(userByRequest(request));
         subCategoryRepository.save(subCategory);
         return subCategory;
     }
@@ -51,20 +63,29 @@ public class CategoryController {
         return subCategory;
     }
 
+    public Users userByRequest(HttpServletRequest request){
+
+        String token = request.getHeader("Authorization");
+        String userName = jwtTokenUtil.getUsernameFromToken(token);
+
+        return userRepository.findByLogin(userName);
+    }
+
 
     /**
      * End points
      * */
 
     @RequestMapping(method = RequestMethod.POST, value = "/cadastrar", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Category> postCategory(@RequestBody Category category) {
+    public ResponseEntity<Category> postCategory(@RequestBody Category category, HttpServletRequest request) {
 
-            return new ResponseEntity<Category>(this.cadCategory(category), HttpStatus.CREATED);
+            return new ResponseEntity<Category>(this.cadCategory(category, request), HttpStatus.CREATED);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Collection<Category>> getAllCategories(){
-        return new ResponseEntity<Collection<Category>>((Collection<Category>) categoryRepository.findAll(), HttpStatus.OK);
+    public ResponseEntity<Collection<Category>> getAllCategories(HttpServletRequest request){
+        return new ResponseEntity<Collection<Category>>((Collection<Category>) categoryRepository
+                .findAllCategoriesByUser(userByRequest(request)), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/change", consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -81,9 +102,9 @@ public class CategoryController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/cadastrarsubcategory", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<SubCategory> postSubCategory(@RequestBody SubCategory subCategory) {
+    public ResponseEntity<SubCategory> postSubCategory(@RequestBody SubCategory subCategory, HttpServletRequest request) {
 
-        return new ResponseEntity<SubCategory>(cadSubCategory(subCategory), HttpStatus.CREATED);
+        return new ResponseEntity<SubCategory>(cadSubCategory(subCategory, request), HttpStatus.CREATED);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/changesubcategory", consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -100,7 +121,8 @@ public class CategoryController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/allsubcategory", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Collection<SubCategory>> getAllSubCategories(){
-        return new ResponseEntity<Collection<SubCategory>>((Collection<SubCategory>) subCategoryRepository.findAll(), HttpStatus.OK);
+    public ResponseEntity<Collection<SubCategory>> getAllSubCategories(HttpServletRequest request){
+        return new ResponseEntity<Collection<SubCategory>>((Collection<SubCategory>)
+                subCategoryRepository.getAllSubCatecoryByUser(userByRequest(request)), HttpStatus.OK);
     }
 }

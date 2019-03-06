@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_account;
 
     private String name_account;
@@ -29,7 +29,7 @@ public class Account {
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     private Users user;
 
-    private boolean principal = false;
+    private int principal = 0;
 
     public Long getId_account() {
         return id_account;
@@ -80,13 +80,6 @@ public class Account {
         this.balance = startBalance;
     }
 
-    public boolean isPrincipal() {
-        return principal;
-    }
-
-    public void setPrincipal(boolean principal) {
-        this.principal = principal;
-    }
 
     public Users getUser() {
         return user;
@@ -102,5 +95,13 @@ public class Account {
 
     public void setDtVcto(Integer dtVcto) {
         this.dtVcto = dtVcto;
+    }
+
+    public int getPrincipal() {
+        return principal;
+    }
+
+    public void setPrincipal(int principal) {
+        this.principal = principal;
     }
 }

@@ -6,12 +6,16 @@ import javax.persistence.*;
 public class SubCategory {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_subCategory;
 
     @ManyToOne
     @JoinColumn(name = "id_category", referencedColumnName = "id_category")
     private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private Users users;
 
     private String subCategoryName;
 
@@ -39,4 +43,11 @@ public class SubCategory {
         this.subCategoryName = subCategoryName;
     }
 
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
 }

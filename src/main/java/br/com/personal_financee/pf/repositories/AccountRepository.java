@@ -16,7 +16,7 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     public Account findByName(@Param("name") String name);
 
     //Retorna a conta principal do usuário.
-    @Query("SELECT ac FROM Account ac WHERE ac.user=:user and ac.principal = true")
+    @Query("SELECT ac FROM Account ac WHERE ac.user=:user and ac.principal = 1")
     public Account principalAccountByUser(@Param("user") Users user);
 
     //Retorna as contas do usuário.
