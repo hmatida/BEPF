@@ -1,9 +1,12 @@
 package br.com.personal_financee.pf.controllers;
 
 import br.com.personal_financee.pf.models.ProfileEnum;
+import br.com.personal_financee.pf.models.Provider;
+import br.com.personal_financee.pf.models.SubCategory;
 import br.com.personal_financee.pf.models.Users;
 import br.com.personal_financee.pf.passclasses.SimpleUser;
 import br.com.personal_financee.pf.repositories.CategoryRepository;
+import br.com.personal_financee.pf.repositories.ProviderRepository;
 import br.com.personal_financee.pf.repositories.SubCategoryRepository;
 import br.com.personal_financee.pf.repositories.UserRepository;
 import br.com.personal_financee.pf.security.JwtTokenUtil;
@@ -17,7 +20,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -32,6 +37,9 @@ public class UserController {
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+
+    @Autowired
+    private ProviderRepository providerRepository;
 
     @Autowired
     private CategoryRepository categoryRepository;
@@ -52,7 +60,21 @@ public class UserController {
             new Thread() {
                 public void run(){
                     categoryRepository.saveAll(UserNew.cadCategories(user));
-                    subCategoryRepository.saveAll(UserNew.cadSubCategories(user));
+                    subCategoryRepository.saveAll(UserNew.cadSubCategories(user,
+                            categoryRepository.findAllCategoriesByUserAll(user)));
+                        Provider pro = new Provider();
+                        pro.setUser(user);
+                        List<SubCategory> subcategories= new ArrayList<SubCategory>();
+                        subcategories.addAll(subCategoryRepository.getAllSubCatecoryByUserAndName(user, "Outros"));
+                        for(int i =0; i<subcategories.size(); i++){
+                            if (subcategories.get(i).getCategory().getName_category().equals("Comercial")){
+                                pro.setSubCategory(subcategories.get(i));
+                                pro.setCategory(subcategories.get(i).getCategory());
+                                break;
+                            }
+                        }
+                        pro.setName_provider("Empresa genérica");
+                        providerRepository.save(pro);
                 }
             }.start();
 

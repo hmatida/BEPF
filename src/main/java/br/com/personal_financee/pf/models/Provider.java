@@ -11,7 +11,7 @@ public class Provider {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_provider;
 
     private String name_provider;
@@ -21,17 +21,22 @@ public class Provider {
     private SubCategory subCategory;
 
     @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private Users user;
+
+    @ManyToOne
     @JoinColumn(name = "id_category", referencedColumnName = "id_category")
     private Category category;
 
     public Provider() {
     }
 
-    public Provider(Long id_provider, String name_provider, SubCategory subCategory, Category category) {
+    public Provider(Long id_provider, String name_provider, SubCategory subCategory, Category category, Users user) {
         this.id_provider = id_provider;
         this.name_provider = name_provider;
         this.subCategory = subCategory;
         this.category = category;
+        this.user=user;
     }
 
     public String getName_provider() {
@@ -64,5 +69,13 @@ public class Provider {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }

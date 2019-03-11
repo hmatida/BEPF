@@ -1,5 +1,7 @@
 package br.com.personal_financee.pf.passclasses;
 
+import br.com.personal_financee.pf.models.Users;
+
 public class PassProvider {
 
     private Long id_provider;
@@ -9,6 +11,16 @@ public class PassProvider {
     private Long subCategory;
 
     private Long category;
+
+    private Users users;
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
 
     public Long getId_provider() {
         return id_provider;

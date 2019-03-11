@@ -9,7 +9,7 @@ import java.util.Calendar;
 public class LaunchPrediction {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_launchPrediction;
 
     @ManyToOne

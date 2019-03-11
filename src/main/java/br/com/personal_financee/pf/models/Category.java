@@ -15,6 +15,8 @@ public class Category {
 
     private String name_category;
 
+    private Integer visible = 0; //0-> Visible is true 0-> Visible is false.
+
     private TypeOfLaunch typeOfLaunch;
 
     public Long getId_category() {
@@ -47,5 +49,13 @@ public class Category {
 
     public void setUsers(Users users) {
         this.users = users;
+    }
+
+    public Integer getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Integer visible) {
+        this.visible = visible;
     }
 }

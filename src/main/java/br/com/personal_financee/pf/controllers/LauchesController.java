@@ -151,6 +151,7 @@ public class LauchesController {
             this.fileName = null;
             this.unsTorageName = null;
         }
+        launches.setUser(null);
         return launches;
     }
 

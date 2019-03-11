@@ -55,7 +55,7 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
      * Retorna dados para alimentação do dashboard, coluna
      * */
     @Query("SELECT new br.com.personal_financee.pf.models.report_models.PrepareRecipeAndExpenses(l.typeOfLaunch, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
-            " l.dt >:dtInicial and l.dt<=:dtFinal GROUP BY l.typeOfLaunch")
+            " l.dt >:dtInicial and l.dt<=:dtFinal and l.chart=1 GROUP BY l.typeOfLaunch")
     public List<PrepareRecipeAndExpenses> getLaunchesByAccountForSumRecipeAndExpenses(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
                                                                                       @Param("dtFinal") Calendar dtFinal);
 
@@ -63,7 +63,7 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
      * Retorna dados para alimentação do dashboard, Pie Chart expenses
      * */
     @Query("SELECT new br.com.personal_financee.pf.models.report_models.PieDataModel(l.subCategory.subCategoryName, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
-            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.S GROUP BY l.subCategory.subCategoryName")
+            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.S and l.chart=1 GROUP BY l.subCategory.subCategoryName")
     public List<PieDataModel> getLaunchesByAccountForSumExpenses(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
                                                                  @Param("dtFinal") Calendar dtFinal);
 
@@ -71,7 +71,7 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
      * Retorna dados para alimentação do dashboard, Pie Chart recepts
      * */
     @Query("SELECT new br.com.personal_financee.pf.models.report_models.PieDataModel(l.subCategory.subCategoryName, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
-            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.C GROUP BY l.subCategory.subCategoryName")
+            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.C and l.chart=1 GROUP BY l.subCategory.subCategoryName")
     public List<PieDataModel> getLaunchesByAccountForSumRecepts(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
                                                                  @Param("dtFinal") Calendar dtFinal);
 

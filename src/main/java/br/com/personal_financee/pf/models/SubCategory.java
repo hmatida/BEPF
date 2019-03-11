@@ -19,6 +19,8 @@ public class SubCategory {
 
     private String subCategoryName;
 
+    private Integer visible = 0; //0-> Visible is true 0-> Visible is false.
+
     public Long getId_subCategory() {
         return id_subCategory;
     }
@@ -49,5 +51,13 @@ public class SubCategory {
 
     public void setUsers(Users users) {
         this.users = users;
+    }
+
+    public Integer getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Integer visible) {
+        this.visible = visible;
     }
 }

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Bank {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_bank;
 
     private String name_bank;

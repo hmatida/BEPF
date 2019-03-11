@@ -9,7 +9,7 @@ import java.util.Calendar;
 public class Launches {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_launch;
 
     @DateTimeFormat (pattern = "yyyy-MM-dd")
@@ -34,6 +34,8 @@ public class Launches {
     @ManyToOne
     @JoinColumn(name = "id_launchPrediction", referencedColumnName = "id_launchPrediction")
     private LaunchPrediction launchPrediction;
+
+    private Integer chart = 1; // 0->Não entrar nos gráficos 1->Entrar nos gráficos.
 
     private String atach = null;
 
@@ -169,5 +171,13 @@ public class Launches {
 
     public void setAtach(String atach) {
         this.atach = atach;
+    }
+
+    public Integer getChart() {
+        return chart;
+    }
+
+    public void setChart(Integer chart) {
+        this.chart = chart;
     }
 }
