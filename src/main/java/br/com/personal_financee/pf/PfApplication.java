@@ -9,7 +9,6 @@ import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,23 +20,18 @@ public class PfApplication extends SpringBootServletInitializer {
 		SpringApplication.run(PfApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(PfApplication.class);
-	}
-
 	@Bean
 	CommandLineRunner init(UserRepository userRepository, PasswordEncoder passwordEncoder){
 		return args -> {
 			initUser(userRepository, passwordEncoder);
-//			initQuartzJob();
+			initQuartzJob();
 		};
 	}
 
 	private void initUser(UserRepository userRepository, PasswordEncoder passwordEncoder){
 		Users admin =  new Users();
 		admin.setLogin("admin");
-		admin.setPassword(passwordEncoder.encode("123456"));
+		admin.setPassword(passwordEncoder.encode("ZQwJDS956"));
 		admin.setProfileEnum(ProfileEnum.ROLE_ADMIN);
 
 		Users find = userRepository.findByLogin(admin.getLogin());
@@ -53,15 +47,15 @@ public class PfApplication extends SpringBootServletInitializer {
 		try {
 			Scheduler scheduler = shedFact.getScheduler();
 			scheduler.start();
-			JobDetail job = JobBuilder.newJob(SendEmailBeforeVcto.class)
-					.withIdentity("validadorJOB", "grupo01")
-					.build();
-			Trigger trigger = TriggerBuilder.newTrigger()
+            JobBuilder jobBuilder = JobBuilder.newJob(SendEmailBeforeVcto.class);
+            jobBuilder.withIdentity("validadorJOB", "grupo01");
+            JobDetail job = jobBuilder.build();
+            Trigger trigger = TriggerBuilder.newTrigger()
 					.withIdentity("validadorTRIGGER", "grupo01")
-					.withSchedule(CronScheduleBuilder.cronSchedule("0/1 * * * * ?"))
+					.withSchedule(CronScheduleBuilder.cronSchedule("0 30 8 * * ?"))
 					.build();
 			scheduler.scheduleJob(job, trigger);
-			System.out.println("------------Quartz em execução------------");
+			System.out.println("------------Trigger de e-mail em execução------------");
 
 		} catch (SchedulerException e1) {
 			e1.printStackTrace();

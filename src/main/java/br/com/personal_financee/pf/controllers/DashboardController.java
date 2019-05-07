@@ -105,6 +105,30 @@ public class DashboardController {
         }
     }
 
+    private List<PieDataModel>dataPieChartExpCategory(Users users){
+
+        List<PieDataModel> datas = new ArrayList<>();
+
+        Calendar dtFinal = Calendar.getInstance();
+        dtFinal = prepareMax(dtFinal);
+        Calendar dtInicial = Calendar.getInstance();
+        dtInicial = prepareMax(dtInicial);
+
+        dtFinal.set(Calendar.DAY_OF_MONTH, dtFinal.getActualMaximum(Calendar.DAY_OF_MONTH));
+        dtInicial.add(Calendar.MONTH, -1);
+        dtInicial.set(Calendar.DAY_OF_MONTH, dtInicial.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+
+        datas.addAll(launchesRepository.getLaunchesByAccountForSumExpensesByCategory(users, dtInicial, dtFinal));
+        for (int i=0; i<datas.size(); i++){
+            Random randCol = new Random();
+
+            datas.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+        }
+
+        return datas;
+    }
+
     private Collection<PieDataModel> dataPieChart(Users users){
         List<PieDataModel> pieDataModels = new ArrayList<>();
 
@@ -119,7 +143,6 @@ public class DashboardController {
 
 
         pieDataModels.addAll(launchesRepository.getLaunchesByAccountForSumExpenses(users, dtInicial, dtFinal));
-        System.out.println(pieDataModels.size());
         for (int i=0; i<pieDataModels.size(); i++){
             Random randCol = new Random();
 
@@ -142,7 +165,28 @@ public class DashboardController {
 
 
         pieDataModels.addAll(launchesRepository.getLaunchesByAccountForSumRecepts(users, dtInicial, dtFinal));
-        System.out.println(pieDataModels.size());
+        for (int i=0; i<pieDataModels.size(); i++){
+            Random randCol = new Random();
+
+            pieDataModels.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+        }
+        return pieDataModels;
+    }
+
+    private List<PieDataModel> dataPieChartRecCategory(Users users){
+        List<PieDataModel> pieDataModels = new ArrayList<>();
+
+        Calendar dtFinal = Calendar.getInstance();
+        dtFinal = prepareMax(dtFinal);
+        Calendar dtInicial = Calendar.getInstance();
+        dtInicial = prepareMax(dtInicial);
+
+        dtFinal.set(Calendar.DAY_OF_MONTH, dtFinal.getActualMaximum(Calendar.DAY_OF_MONTH));
+        dtInicial.add(Calendar.MONTH, -1);
+        dtInicial.set(Calendar.DAY_OF_MONTH, dtInicial.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+
+        pieDataModels.addAll(launchesRepository.getLaunchesByAccountForSumReceByCategory(users, dtInicial, dtFinal));
         for (int i=0; i<pieDataModels.size(); i++){
             Random randCol = new Random();
 
@@ -190,6 +234,16 @@ public class DashboardController {
     @RequestMapping(method = RequestMethod.GET, value = "/piechartrecepts", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity  <Collection<PieDataModel>> pieChart2(HttpServletRequest request){
         return new ResponseEntity<Collection<PieDataModel>>(dataPieChartRecept(userByRequest(request)), HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/piechartcategoryexp", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity  <Collection<PieDataModel>> piechartcategoryexp(HttpServletRequest request){
+        return new ResponseEntity<Collection<PieDataModel>>(dataPieChartExpCategory(userByRequest(request)), HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/piechartcategoryrecp", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity  <Collection<PieDataModel>> piechartcategoryrecpt(HttpServletRequest request){
+        return new ResponseEntity<Collection<PieDataModel>>(dataPieChartRecCategory(userByRequest(request)), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/allpredvcdo", produces = MediaType.APPLICATION_JSON_VALUE)

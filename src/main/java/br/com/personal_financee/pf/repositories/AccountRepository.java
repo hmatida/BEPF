@@ -12,8 +12,8 @@ import java.util.List;
 public interface AccountRepository extends CrudRepository<Account, Long> {
 
     //Buscar por nome da conta
-    @Query("SELECT ac FROM Account ac WHERE ac.name_account like :name")
-    public Account findByName(@Param("name") String name);
+    @Query("SELECT ac FROM Account ac WHERE ac.name_account like :name and ac.user=:user")
+    public Account findByName(@Param("name") String name, @Param("user") Users user);
 
     //Retorna a conta principal do usuário.
     @Query("SELECT ac FROM Account ac WHERE ac.user=:user and ac.principal = 1")

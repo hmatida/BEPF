@@ -81,9 +81,13 @@ public class UserController {
 
             user.setPassword(null);
 
+            String subject = "Personal Financee - Confirmação de cadastro.";
+
+            String mensage = user.getName() + " o seu cadastro no sistema Personal Financee foi efetuado com sucesso. Muito Obrigado.";
+
             new Thread() {
                 public void run(){
-                    SendMail.enviaEmail(user.getEmail());
+                    SendMail.enviaEmail(user.getEmail(), mensage, subject);
                 }
             }.start();
             return user;

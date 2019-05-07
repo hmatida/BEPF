@@ -14,7 +14,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.jws.soap.SOAPBinding;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 
@@ -42,7 +41,7 @@ public class ProviderController {
      * Parâmetro de execução
      * */
     private Provider cadProvider(Provider passProvider, Users users){
-        if (providerRepository.findByName(passProvider.getName_provider()) != null){
+        if (providerRepository.findByName(passProvider.getName_provider(), users) != null){
             return null;
         } else {
             passProvider.setUser(users);

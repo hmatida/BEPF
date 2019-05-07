@@ -75,5 +75,15 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
     public List<PieDataModel> getLaunchesByAccountForSumRecepts(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
                                                                  @Param("dtFinal") Calendar dtFinal);
 
+    @Query("SELECT new br.com.personal_financee.pf.models.report_models.PieDataModel(l.subCategory.category.name_category, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
+            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.S and l.chart=1 GROUP BY l.subCategory.category.name_category")
+    public List<PieDataModel> getLaunchesByAccountForSumExpensesByCategory(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
+                                                                @Param("dtFinal") Calendar dtFinal);
+
+    @Query("SELECT new br.com.personal_financee.pf.models.report_models.PieDataModel(l.subCategory.category.name_category, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
+            " l.dt >:dtInicial and l.dt<=:dtFinal and l.typeOfLaunch=br.com.personal_financee.pf.models.TypeOfLaunch.C and l.chart=1 GROUP BY l.subCategory.category.name_category")
+    public List<PieDataModel> getLaunchesByAccountForSumReceByCategory(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
+                                                                           @Param("dtFinal") Calendar dtFinal);
+
 
 }

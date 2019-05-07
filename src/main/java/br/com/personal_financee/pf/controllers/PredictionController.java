@@ -1,10 +1,7 @@
 package br.com.personal_financee.pf.controllers;
 
-import br.com.personal_financee.pf.models.Account;
 import br.com.personal_financee.pf.models.LaunchPrediction;
-import br.com.personal_financee.pf.models.Launches;
 import br.com.personal_financee.pf.models.Users;
-import br.com.personal_financee.pf.passclasses.ExtractFilter;
 import br.com.personal_financee.pf.passclasses.PredictionPass;
 import br.com.personal_financee.pf.repositories.LaunchesPredictionRepository;
 import br.com.personal_financee.pf.repositories.LaunchesRepository;
@@ -74,7 +71,7 @@ public class PredictionController {
 
     private Collection<LaunchPrediction> saveCollectionsLanches(Users user, Collection<LaunchPrediction> launches){
 
-        List<LaunchPrediction> lisLaunches = new ArrayList<LaunchPrediction>();
+        List<LaunchPrediction> lisLaunches = new ArrayList<>();
         lisLaunches.addAll(launches);
         for (int i = 0; i < lisLaunches.size(); i++) {
             lisLaunches.get(i).setUser(user);

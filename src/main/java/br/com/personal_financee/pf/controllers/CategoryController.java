@@ -1,11 +1,9 @@
 package br.com.personal_financee.pf.controllers;
 
 
-import br.com.personal_financee.pf.models.Account;
 import br.com.personal_financee.pf.models.Category;
 import br.com.personal_financee.pf.models.SubCategory;
 import br.com.personal_financee.pf.models.Users;
-import br.com.personal_financee.pf.passclasses.PassSubCategory;
 import br.com.personal_financee.pf.repositories.CategoryRepository;
 import br.com.personal_financee.pf.repositories.SubCategoryRepository;
 import br.com.personal_financee.pf.repositories.UserRepository;

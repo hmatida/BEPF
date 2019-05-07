@@ -7,6 +7,7 @@ import br.com.personal_financee.pf.models.Users;
 import br.com.personal_financee.pf.models.LaunchesAtach;
 import br.com.personal_financee.pf.repositories.*;
 import br.com.personal_financee.pf.security.JwtTokenUtil;
+import br.com.personal_financee.pf.utility.Transfer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -160,7 +161,7 @@ public class LauchesController {
      * 20/10/2018 -> Adicionado o salvamento de anexo (file) pertinente ao lançamento.
      * **/
     private Launches cadLaunchesAtachBd(Launches launches) throws IOException {
-        adjustLauncheBalance(launches.getUser(), launches);
+        adjustLauncheBalance(launches.getUser(), launches); //Primeira chamada do cálculo
         launchesRepository.save(launches);
         if (this.launchesAtach != null){
             this.launchesAtach.setLaunches(launches);
@@ -256,9 +257,41 @@ public class LauchesController {
     }
 
     /**
+     *Efetua o ajuste do saldo da conta de acordo com o lançamento.
+     *
+     * 1 - Primeira chamada para o cálculo do saldo.
+     * */
+    private void adjustLauncheBalance (Users user, Launches launches){
+
+        //Condicionante de entrada.
+        if (launches.getTypeOfLaunch().getDescricao().equals("Entrada")){
+            if (verifyExistsLanchInAccount(user, launches.getAccount()) == false){
+                launches.setBalance(launches.getAccount().getStartBalance()+launches.getPay_value());
+                launches.getAccount().setBalance(launches.getBalance());
+            }else{
+                calcBalance(user, launches, 0); //Segunda chamada para o cálculo.
+
+            }
+        } else { //Condicionante se não for entrada
+            if (verifyExistsLanchInAccount(user, launches.getAccount()) == false){
+                launches.setBalance(launches.getAccount().getStartBalance()-launches.getPay_value());
+                launches.getAccount().setBalance(launches.getBalance());
+            }else{
+                calcBalance(user, launches, 1);
+            }
+        }
+        System.out.println("Saldo calculado do lançamento ---> "+launches.getBalance());
+        launches.getAccount().setBalance(launches.getBalance());
+        System.out.println("Saldo calculado da conta ---> "+launches.getAccount().getBalance());
+        saveAccount(launches.getAccount());
+    }
+
+    /**
      * Calcula e ajusta o saldo da conta.
      * Se operation = 0 -> soma
      * operation = 1 -> subtrai
+     *
+     * 2 - Segunda chamada para o cálculo.
      * */
     private void calcBalance(Users user, Launches launches, int operation){
         Launches lastLaunch = launchesRepository.getLastLaunchByAccount(user, launches.getAccount());
@@ -279,9 +312,6 @@ public class LauchesController {
                 launches.setBalance(lastLaunch.getBalance()-launches.getPay_value());
             }
         }
-        lastLaunch = launchesRepository.getLastLaunchByAccount(user, launches.getAccount());
-        lastLaunch.getAccount().setBalance(lastLaunch.getBalance());
-        accountRepository.save(lastLaunch.getAccount());
     }
 
     /**
@@ -292,30 +322,6 @@ public class LauchesController {
         launches.setAccount(accountRepository.findById(launches.getAccount().getId_account()).get());
     }
 
-
-    /**
-     *Efetua o ajuste do saldo da conta de acordo com o lançamento.
-     * */
-    private void adjustLauncheBalance (Users user, Launches launches){
-
-        //Condicionante de entrada.
-        if (launches.getTypeOfLaunch().getDescricao().equals("Entrada")){
-            if (verifyExistsLanchInAccount(user, launches.getAccount()) == false){
-                launches.setBalance(launches.getAccount().getStartBalance()+launches.getPay_value());
-                launches.getAccount().setBalance(launches.getBalance());
-            }else{
-                calcBalance(user, launches, 0);
-            }
-        } else { //Condicionante se não for entrada
-            if (verifyExistsLanchInAccount(user, launches.getAccount()) == false){
-                launches.setBalance(launches.getAccount().getStartBalance()-launches.getPay_value());
-                launches.getAccount().setBalance(launches.getBalance());
-            }else{
-                calcBalance(user, launches, 1);
-            }
-        }
-        saveAccount(launches.getAccount());
-    }
 
     public Users userByRequest(HttpServletRequest request){
 
@@ -355,7 +361,6 @@ public class LauchesController {
             try {
                 this.storeAtachment(file, null);
                 String response = "Upload enviado com sucesso!";
-                System.out.println(file.getOriginalFilename());
                 return new ResponseEntity<String>(response, HttpStatus.OK);
             } catch (Exception e){
                 String response = e.getMessage();
@@ -422,9 +427,37 @@ public class LauchesController {
         LaunchesAtach launchesAtach = getLaunchesAtach(laun);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.parseMediaType(launchesAtach.getExtension()));
-        System.out.println("teste.....");
-        System.out.println(launchesAtach.getFileName());
         return new ResponseEntity<byte[]>(launchesAtach.getAtach(), headers, HttpStatus.OK);
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/transferencia", produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<Launches> transferencia(@RequestBody Transfer trasnfer, HttpServletRequest request){
+        setClasses(trasnfer.getCredito());
+        setClasses(trasnfer.getDebito());
+        trasnfer.getCredito().setUser(userByRequest(request));
+        trasnfer.getCredito().setChart(0);
+        trasnfer.getDebito().setUser(userByRequest(request));
+        trasnfer.getDebito().setChart(0);
+        trasnfer.getDebito().setProvider(providerRepository.findByName("Empresa genérica", userByRequest(request)));
+        trasnfer.getCredito().setProvider(providerRepository.findByName("Empresa genérica", userByRequest(request)));
+        trasnfer.getDebito().setSubCategory(subCategoryRepository.getAllSubCatecoryByUserAndName(
+                userByRequest(request), "Transferência S").get(0));
+        trasnfer.getCredito().setSubCategory(subCategoryRepository.getAllSubCatecoryByUserAndName(
+                userByRequest(request), "Transferência E").get(0));
+        String response = "";
+        try {
+            Launches debito = cadLaunchesAtachBd(trasnfer.getDebito());
+            Launches credito = cadLaunchesAtachBd(trasnfer.getCredito());
+            response = "Salvo com sucesso";
+            return new ResponseEntity<Launches>(credito, HttpStatus.CREATED);
+        } catch (IOException e) {
+            e.printStackTrace();
+            response = "error";
+            return new ResponseEntity<Launches>( trasnfer.getCredito(), HttpStatus.EXPECTATION_FAILED);
+        }
+
+
+    }
+
 
 }

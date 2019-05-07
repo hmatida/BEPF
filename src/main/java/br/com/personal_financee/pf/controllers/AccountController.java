@@ -3,7 +3,6 @@ package br.com.personal_financee.pf.controllers;
 
 import br.com.personal_financee.pf.models.Account;
 import br.com.personal_financee.pf.models.Users;
-import br.com.personal_financee.pf.passclasses.SimpleUser;
 import br.com.personal_financee.pf.repositories.AccountRepository;
 import br.com.personal_financee.pf.repositories.UserRepository;
 import br.com.personal_financee.pf.security.JwtTokenUtil;
@@ -35,8 +34,8 @@ public class AccountController {
     /**
      * Parâmetro de execução
      * */
-    private Account cadAccount(Account account){
-        if (accountRepository.findByName(account.getName_account()) != null){
+    private Account cadAccount(Account account) {
+        if (accountRepository.findByName(account.getName_account(), account.getUser()) != null){
             return null;
         } else {
             accountRepository.save(account);

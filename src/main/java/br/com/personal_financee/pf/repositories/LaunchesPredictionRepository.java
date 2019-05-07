@@ -48,4 +48,14 @@ public interface LaunchesPredictionRepository extends CrudRepository<LaunchPredi
                                                                                @Param("pay") int isPay,
                                                                                @Param("dtInicial") Calendar dtFinal,
                                                                                @Param("dtFinal") Calendar dtInicial);
+
+
+    /**
+     * Retorna todos os lançamentos com base no usuário e de acordo com os parâmetros opcionais.
+     * @return: <LaunchPrediction>
+     * */
+    @Query("SELECT lp FROM LaunchPrediction lp where lp.isPay=:pay and lp.dt_exp BETWEEN :dtInicial and :dtFinal ORDER BY lp.dt_exp ASC")
+    public List<LaunchPrediction> getAllVctos(@Param("pay") int isPay, @Param("dtInicial") Calendar dtFinal,
+                                                                   @Param("dtFinal") Calendar dtInicial);
+
 }

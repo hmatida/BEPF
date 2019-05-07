@@ -4,18 +4,12 @@ import br.com.personal_financee.pf.models.Category;
 import br.com.personal_financee.pf.models.SubCategory;
 import br.com.personal_financee.pf.models.TypeOfLaunch;
 import br.com.personal_financee.pf.models.Users;
-import br.com.personal_financee.pf.repositories.CategoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class UserNew {
-
-    @Autowired
-    private CategoryRepository categoryRepository;
 
     public static Collection<Category> cadCategories(Users users){
 
