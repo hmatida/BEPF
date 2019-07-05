@@ -1,266 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="082ff8c5-a19e-486e-a50a-1f9b3fd8e6e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/PfApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/PfApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AuthenticationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/PredictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ProviderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/ProviderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/ProviderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/paper-dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/paper-dashboard.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/themify-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/themify.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/themify.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/themify.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/themify.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/Pf-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/angular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/angular2-logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/angular2-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/faces/face-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/faces/face-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/faces/face-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/faces/face-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/new_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/tim_80x80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper-dashboard.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_alerts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_animate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_checkbox-radio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_footers.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_misc.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_sidebar-and-main-panel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_labels.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_tabs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_transparency.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/mixins/_vendor-prefixes.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/sass/paper/plugins/_fixed-plugin.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/main.148f9e28091848918f5a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/polyfills.0f02a9e0297c9d9c4b84.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/runtime.b57bf819d5bdce77f1c7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts.fd249eb467c77c20706b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.3ff695c00d717f2d2a11.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/PfApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/PfApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/AuthenticationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/AuthenticationRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/LauchesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/LauchesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/PredictionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/ProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/ProviderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/LaunchPrediction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/LaunchPrediction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Launches.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Launches.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/LaunchesAtach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/LaunchesAtach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/SubCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/models/SubCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/passclasses/PassProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/passclasses/PassProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/AccountRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/CategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/LaunchesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/LaunchesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/ProviderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/ProviderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/SubCategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/repositories/SubCategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/SendMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/SendMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/SendMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/SendMail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/UserNew.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendpersonalfinancee/WEB-INF/classes/br/com/personal_financee/pf/utility/UserNew.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/PfApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/PfApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/AuthenticationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/AuthenticationRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/ExtractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/ExtractController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/LauchesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/LauchesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/PredictionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/ProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/ProviderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/controllers/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/LaunchPrediction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/LaunchPrediction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Launches.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Launches.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/LaunchesAtach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/LaunchesAtach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/ProfileEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/ProfileEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Sexo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Sexo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/SubCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/SubCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/TypeOfAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/TypeOfAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/TypeOfLaunch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/TypeOfLaunch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/initers/VerifyCreditCartBill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/initers/VerifyCreditCartBill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PieDataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PieDataModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PredictionDashboardDataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PredictionDashboardDataModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PrepareRecipeAndExpenses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/PrepareRecipeAndExpenses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/RecipeAndExpenses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/models/report_models/RecipeAndExpenses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/ExtractFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/ExtractFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PassProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PassProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PassSubCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PassSubCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PredictionPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/PredictionPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/SimpleUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/passclasses/SimpleUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/AccountRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/CategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LauncheAtachRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LauncheAtachRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LaunchesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/LaunchesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/ProviderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/ProviderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/SubCategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/SubCategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/CurrentUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/CurrentUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtAuthenticationTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUserDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUserDetailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/JwtUserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/SimpleCORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/SimpleCORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/security/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/DetailsFromRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/DetailsFromRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/SendMail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/UserNew.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/personal_financee/pf/utility/UserNew.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/main.148f9e28091848918f5a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/polyfills.0f02a9e0297c9d9c4b84.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/runtime.b57bf819d5bdce77f1c7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scripts.fd249eb467c77c20706b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/styles.3ff695c00d717f2d2a11.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="5a633fae-0439-4074-a796-565441eb7a62" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="pf" />
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LauchesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="228" column="30" lean-forward="true" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LaunchesRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4669187">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/PfApplication.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#840#841#0" expanded="true" />
+                    <element signature="e#895#896#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="521">
+                  <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="92" column="52" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="52" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Launches.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2074">
+                  <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#3940#3941#0" expanded="true" />
+                    <element signature="e#3968#3969#0" expanded="true" />
+                    <element signature="e#4011#4012#0" expanded="true" />
+                    <element signature="e#4045#4046#0" expanded="true" />
+                    <element signature="e#4077#4078#0" expanded="true" />
+                    <element signature="e#4104#4105#0" expanded="true" />
+                    <element signature="e#4145#4146#0" expanded="true" />
+                    <element signature="e#4177#4178#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="460" column="17" lean-forward="true" selection-start-line="460" selection-start-column="17" selection-end-line="460" selection-end-column="17" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ExtractController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="299">
+                  <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>`</find>
-      <find>have</find>
-      <find>jwt</find>
-      <find>system</find>
-      <find>printer</find>
-      <find>Valores</find>
-      <find>launcheAtachRepository</find>
-      <find>getLaunchesAtach</find>
-      <find>web</find>
-      <find>cadUser</find>
-      <find>outr</find>
-      <find>accoun</find>
-      <find>entrada</find>
-      <find>usernew</find>
-      <find>syste</find>
-      <find>sys</find>
-      <find>last</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -268,58 +123,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/JwtUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/DetailsFromRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/PrepareRecipeAndExpenses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/RecipeAndExpenses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/BarChartDataModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/PieDataModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/PredictionDashboardDataModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LunchesFileRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/LunchesFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/atachs/Teste.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/LaunchesAtach.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LauncheAtachRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ExtractController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/PrevisonController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/PredictionPass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/initers/VerifyCreditCartBill.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/CategoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/HomeController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/LaunchesAtach.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/LaunchPrediction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/PassProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Provider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Launches.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/SubCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/CategoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/SubCategoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/Transfer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/ProviderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendMail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/GetLists.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/PfApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/PredictionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AccountController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AuthenticationRestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ProviderController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/Transfer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Launches.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ExtractController.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -329,35 +147,21 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="pf" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pf" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pf" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -416,26 +220,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pf" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="report_models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BEPF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pf" type="462c0819:PsiDirectoryNode" />
-              <item name="passclasses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BEPF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pf" type="462c0819:PsiDirectoryNode" />
               <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BEPF" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pf" type="462c0819:PsiDirectoryNode" />
+              <item name="utility" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pf" type="b2602c69:ProjectViewProjectNode" />
@@ -451,20 +245,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/assets" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-    </key>
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -478,90 +259,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PfApplication">
+  <component name="RunManager">
     <configuration name="PfApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.personal_financee.pf.PfApplication" />
       <module name="pf" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.personal_financee.pf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="br.com.personal_financee.pf.utility in pf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.personal_financee.pf.utility.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.personal_financee.pf.utility" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <list>
-      <item itemvalue="Application.PfApplication" />
-      <item itemvalue="JUnit.br.com.personal_financee.pf.utility in pf" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PfApplication" />
-        <item itemvalue="JUnit.br.com.personal_financee.pf.utility in pf" />
       </list>
     </recent_temporary>
   </component>
@@ -570,478 +284,106 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="082ff8c5-a19e-486e-a50a-1f9b3fd8e6e5" name="Default" comment="" />
-      <created>1532787961939</created>
+      <changelist id="5a633fae-0439-4074-a796-565441eb7a62" name="Default Changelist" comment="" />
+      <created>1557435315188</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1532787961939</updated>
+      <updated>1557435315188</updated>
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="br_com_personal_financee_pf_utility_in_pf - 2018.08.05 at 16h 16m 06s.xml">
-      <configuration name="br.com.personal_financee.pf.utility in pf" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5064378" side_tool="true" weight="0.54239404" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32904148" />
-      <window_info anchor="bottom" auto_hide="true" id="Run" order="5" sideWeight="0.49356222" weight="0.27805486" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917705" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32917705" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4959217" visible="true" weight="0.1935287" />
-      <window_info id="Structure" order="1" sideWeight="0.5018587" side_tool="true" weight="0.21459228" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4642857" />
-      <window_info id="Favorites" order="6" sideWeight="0.5040783" side_tool="true" weight="0.1874106" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32917705" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15405117" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3241895" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20368364" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.map" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/Claims.class</url>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java</url>
-          <line>161</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java</url>
-          <line>162</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="79" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/JwtUserDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/JwtUserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/JwtAuthenticationRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/security/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Sexo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/TypeOfAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/ProfileEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/LaunchPrediction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/LaunchesAtach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Bank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="87" selection-start-line="24" selection-start-column="87" selection-end-line="24" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/TypeOfLaunch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/SubCategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/ProviderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1812#1813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.2.1/quartz-2.2.1.jar!/org/quartz/simpl/SimpleJobFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesPredictionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/Transfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.2.1/quartz-2.2.1.jar!/org/quartz/JobBuilder.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="425">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/GetLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/PfApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        <state relative-caret-position="408">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/SimpleUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/PredictionPass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/PassProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Launches.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="2074">
+          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
           <folding>
-            <element signature="e#3716#3717#0" expanded="true" />
-            <element signature="e#3744#3745#0" expanded="true" />
-            <element signature="e#3787#3788#0" expanded="true" />
-            <element signature="e#3821#3822#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+            <element signature="e#3968#3969#0" expanded="true" />
+            <element signature="e#4011#4012#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4077#4078#0" expanded="true" />
+            <element signature="e#4104#4105#0" expanded="true" />
+            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#4177#4178#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/SubCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#1267#1268#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/models/report_models/PieDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/passclasses/PassSubCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/AuthenticationRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ExtractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="115" column="64" selection-start-line="115" selection-start-column="63" selection-end-line="115" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ProviderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/PredictionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="149" column="15" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/DetailsFromRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendEmailBeforeVcto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="30" column="76" lean-forward="true" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/UserNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#cadSubCategories#0;class#UserNew#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/utility/SendMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/LauchesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="228" column="30" lean-forward="true" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
+        <state relative-caret-position="399">
+          <caret line="460" column="17" lean-forward="true" selection-start-line="460" selection-start-column="17" selection-end-line="460" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1050,77 +392,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/repositories/LaunchesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="521">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="92" column="52" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/personal_financee/pf/controllers/ExtractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>pf</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>1.8.0_211</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

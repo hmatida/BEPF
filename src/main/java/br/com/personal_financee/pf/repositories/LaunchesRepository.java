@@ -45,7 +45,7 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
     @Query("SELECT la FROM Launches la WHERE la.id_launch=(SELECT MAX(la2.id_launch) FROM Launches la2 WHERE la2.dt=(SELECT MAX(b.dt) FROM Launches b WHERE b.user=:user and b.account=:account))")
     public Launches getLastLaunchByAccount(@Param("user") Users user, @Param("account") Account account);
 
-    /*
+    /**
      * Retorna todos os lançamentos referentes a dada conta.
      * */
     @Query("SELECT la FROM Launches la WHERE la.user=:user and la.account=:account ORDER BY la.dt, la.id_launch")

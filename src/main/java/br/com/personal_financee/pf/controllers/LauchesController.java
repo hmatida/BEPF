@@ -157,6 +157,43 @@ public class LauchesController {
     }
 
     /**
+     * Prepara a classe Launch gravando os meses em String para futuros relatórios.
+     *
+     * @return void;
+     * */
+    private void prepareLaunchMonthAndYear(Launches launches) {
+        int month = (launches.getDt().get(Calendar.MONTH));
+        launches.setMonth(month);
+        launches.setYear(launches.getDt().get(Calendar.YEAR));
+        Integer year = launches.getYear();
+        if (month == 0){
+            launches.setMonthYear("Jan/"+year.toString());
+        } else if (month == 1){
+            launches.setMonthYear("Fev/"+year.toString());
+        } else if (month == 2){
+            launches.setMonthYear("Mar/"+year.toString());
+        } else if (month == 3){
+            launches.setMonthYear("Abr/"+year.toString());
+        } else if (month == 4){
+            launches.setMonthYear("Mai/"+year.toString());
+        } else if (month == 5){
+            launches.setMonthYear("Jun/"+year.toString());
+        } else if (month == 6){
+            launches.setMonthYear("Jul/"+year.toString());
+        } else if (month == 7){
+            launches.setMonthYear("Ago/"+year.toString());
+        } else if (month == 8){
+            launches.setMonthYear("Set/"+year.toString());
+        } else if (month == 9){
+            launches.setMonthYear("Out/"+year.toString());
+        } else if (month == 10){
+            launches.setMonthYear("Nov/"+year.toString());
+        } else {
+            launches.setMonthYear("Dez/"+year.toString());
+        };
+    }
+
+    /**
      * Persiste lançamento no banco de dados.
      * 20/10/2018 -> Adicionado o salvamento de anexo (file) pertinente ao lançamento.
      * **/

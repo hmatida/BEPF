@@ -37,6 +37,12 @@ public class Launches {
 
     private Integer chart = 1; // 0->Não entrar nos gráficos 1->Entrar nos gráficos.
 
+    private Integer month;
+
+    private Integer year;
+
+    private String monthYear;
+
     private String atach = null;
 
     private TypeOfLaunch typeOfLaunch;
@@ -179,5 +185,28 @@ public class Launches {
 
     public void setChart(Integer chart) {
         this.chart = chart;
+    }
+
+    public Integer getMonth() {
+        return month;
+    }
+
+    public void setMonth(Integer month) {
+        this.month = month;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public String getMonthYear() {
+        return monthYear;
+    }
+    public void setMonthYear(String monthYear) {
+        this.monthYear = monthYear;
     }
 }

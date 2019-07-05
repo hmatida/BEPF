@@ -77,7 +77,7 @@ public class ExtractController {
                 dt.add(Calendar.DATE, -60);
                 return launchesRepository.findLauchesByDtInterval(user, filter.getAccount(), dt, now);
             case 3: //Mês passado
-                dt.add(Calendar.MONTH, -2);
+                dt.add(Calendar.MONTH, -1);
                 dt.set(Calendar.DAY_OF_MONTH, dt.getActualMinimum(Calendar.DATE));
                 now.add(Calendar.MONTH, -1);
                 now.set(Calendar.DAY_OF_MONTH, now.getActualMaximum(Calendar.DAY_OF_MONTH));
