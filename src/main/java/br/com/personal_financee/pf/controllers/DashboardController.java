@@ -69,9 +69,17 @@ public class DashboardController {
     private List<RecipeAndExpenses> arredondaPara2CasasDecimais(List<RecipeAndExpenses> recipeAndExpenses) {
         if (recipeAndExpenses.isEmpty() != true){
             for (int i = 0; i<recipeAndExpenses.size(); i++){
+
+                if (recipeAndExpenses.get(i).getExpenses() == null){
+                    recipeAndExpenses.get(i).setExpenses(0.00);
+                }
                 BigDecimal bd = new BigDecimal(recipeAndExpenses.get(i).getExpenses())
                         .setScale(2, RoundingMode.HALF_EVEN);
                 recipeAndExpenses.get(i).setExpenses(bd.doubleValue());
+
+                if (recipeAndExpenses.get(i).getRecipe() == null){
+                    recipeAndExpenses.get(i).setRecipe(0.00);
+                }
                 BigDecimal bd2 = new BigDecimal(recipeAndExpenses.get(i).getRecipe())
                         .setScale(2, RoundingMode.HALF_EVEN);
                 recipeAndExpenses.get(i).setRecipe(bd2.doubleValue());
@@ -85,16 +93,18 @@ public class DashboardController {
         Calendar dtFinal = Calendar.getInstance();
         dtFinal = prepareMax(dtFinal);
         Calendar dtInicial = Calendar.getInstance();
-        dtInicial = prepareMax(dtInicial);
+        dtInicial = prepareMin(dtInicial);
         List<PrepareRecipeAndExpenses> prepareRecipeAndExpenses = new ArrayList<>();
         List<RecipeAndExpenses> recipeAndExpenses = new ArrayList<>();
         int value = 0;
         for (int i = 0; i<12; i++) {
             dtFinal.add(Calendar.MONTH, (-1) * value);
             dtFinal.set(Calendar.DAY_OF_MONTH, dtFinal.getActualMaximum(Calendar.DAY_OF_MONTH));
-            System.out.println("Dt final: " + dtFinal.get(Calendar.DAY_OF_MONTH) + "/" + dtFinal.get(Calendar.MONTH) + "/" + dtFinal.get(Calendar.YEAR));
-            dtInicial.add(Calendar.MONTH, (-1) * value);
-            dtInicial.set(Calendar.DAY_OF_MONTH, dtInicial.getActualMinimum(Calendar.DAY_OF_MONTH));
+            dtFinal = prepareMax(dtFinal);
+//            System.out.println("Dt final: " + dtFinal.get(Calendar.DAY_OF_MONTH) + "/" + dtFinal.get(Calendar.MONTH) + "/" + dtFinal.get(Calendar.YEAR));
+                dtInicial.add(Calendar.MONTH, -1);
+                dtInicial.set(Calendar.DAY_OF_MONTH, dtInicial.getActualMaximum(Calendar.DAY_OF_MONTH));
+                dtInicial = prepareMax(dtInicial);
             prepareRecipeAndExpenses.addAll(launchesRepository.getLaunchesByAccountForSumRecipeAndExpenses(user, dtInicial, dtFinal));
             value = 1;
 
@@ -228,10 +238,10 @@ public class DashboardController {
         return calendar;
     }
     private Calendar prepareMin(Calendar calendar){
-        calendar.set(Calendar.HOUR, calendar.getActualMinimum(Calendar.HOUR));
-        calendar.set(Calendar.MINUTE, calendar.getActualMinimum(Calendar.MINUTE));
-        calendar.set(Calendar.SECOND, calendar.getActualMinimum(Calendar.SECOND));
         calendar.set(Calendar.MILLISECOND, calendar.getActualMinimum(Calendar.MILLISECOND));
+        calendar.set(Calendar.SECOND, calendar.getActualMinimum(Calendar.SECOND));
+        calendar.set(Calendar.MINUTE, calendar.getActualMinimum(Calendar.MINUTE));
+        calendar.set(Calendar.HOUR, calendar.getActualMinimum(Calendar.HOUR));
         return calendar;
     }
 

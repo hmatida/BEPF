@@ -55,8 +55,8 @@ public interface LaunchesRepository extends CrudRepository<Launches , Long> {
      * Retorna dados para alimentação do dashboard, coluna
      * */
     @Query("SELECT new br.com.personal_financee.pf.models.report_models.PrepareRecipeAndExpenses(l.typeOfLaunch, SUM(l.pay_value)) FROM Launches l WHERE l.user=:user and"+
-            " l.dt >:dtInicial and l.dt<=:dtFinal and l.chart=1 GROUP BY l.typeOfLaunch")
-    public List<PrepareRecipeAndExpenses> getLaunchesByAccountForSumRecipeAndExpenses(@Param("user") Users user, @Param("dtInicial") Calendar dtInicial,
+            " l.dt BETWEEN :dtInit and :dtFinal and l.chart=1 GROUP BY l.typeOfLaunch")
+    public List<PrepareRecipeAndExpenses> getLaunchesByAccountForSumRecipeAndExpenses(@Param("user") Users user, @Param("dtInit") Calendar dtInit,
                                                                                       @Param("dtFinal") Calendar dtFinal);
 
     /**
