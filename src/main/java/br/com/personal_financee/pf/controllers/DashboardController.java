@@ -88,6 +88,17 @@ public class DashboardController {
         return recipeAndExpenses;
     }
 
+    /**
+     * Método que arredonda para 2 casas decimais de um Double.
+     * @return Double
+     * */
+    private Double arredonda2CasasDecimais(Double numero){
+        BigDecimal bd = new BigDecimal(numero)
+                .setScale(2, RoundingMode.HALF_EVEN);
+        numero = bd.doubleValue();
+        return numero;
+    }
+
     //Preparação dos dados.
     private Collection<RecipeAndExpenses> prepareAmount(Users user){
         Calendar dtFinal = Calendar.getInstance();
@@ -152,6 +163,7 @@ public class DashboardController {
             Random randCol = new Random();
 
             datas.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+            datas.get(i).setValue(arredonda2CasasDecimais(datas.get(i).getValue()));
         }
 
         return datas;
@@ -175,6 +187,7 @@ public class DashboardController {
             Random randCol = new Random();
 
             pieDataModels.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+            pieDataModels.get(i).setValue(arredonda2CasasDecimais(pieDataModels.get(i).getValue()));
         }
         return pieDataModels;
     }
@@ -195,8 +208,8 @@ public class DashboardController {
         pieDataModels.addAll(launchesRepository.getLaunchesByAccountForSumRecepts(users, dtInicial, dtFinal));
         for (int i=0; i<pieDataModels.size(); i++){
             Random randCol = new Random();
-
             pieDataModels.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+            pieDataModels.get(i).setValue(arredonda2CasasDecimais(pieDataModels.get(i).getValue()));
         }
         return pieDataModels;
     }
@@ -217,8 +230,8 @@ public class DashboardController {
         pieDataModels.addAll(launchesRepository.getLaunchesByAccountForSumReceByCategory(users, dtInicial, dtFinal));
         for (int i=0; i<pieDataModels.size(); i++){
             Random randCol = new Random();
-
             pieDataModels.get(i).setColor(String.format("#%06X", randCol.nextInt(0xFFFFFF+1)));
+            pieDataModels.get(i).setValue(arredonda2CasasDecimais(pieDataModels.get(i).getValue()));
         }
         return pieDataModels;
     }
